@@ -3,6 +3,11 @@
 :root {
     --soft-violet: hsl(273, 75%, 66%);
     --soft-blue: hsl(240, 73%, 65%);
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%)
 }
 
 html {
@@ -18,10 +23,19 @@ body{
     background: linear-gradient(
         var(--soft-blue), 
         var(--soft-violet));
+    color: var(--very-dark-desaturated-blue);
 }
 
 .image-container {
-    width:100%
+    width:40%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.questions-container {
+    width: 60%;
+    padding: 20px;
 }
 
 .faq-container{
@@ -32,4 +46,30 @@ body{
     border-radius: 20px;
     margin: auto;
     margin-top: 5rem;
+}
+
+.faq-title {
+    padding-left: 40px;
+}
+
+.question {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.question:hover {
+    color: var(--soft-red);
+} 
+
+.arrow-down {
+    height: 10px;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+hr {
+border-top: 0.5px var(--light-grayish-blue);
 }
